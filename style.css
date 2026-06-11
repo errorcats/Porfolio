@@ -97,7 +97,7 @@ body {
   left: 0px;
   bottom: 0px;
   padding: 4px;
-  z-index: 5;
+  z-index: 999999;
   justify-content: space-between;
   user-select: none;
   display: flex;
