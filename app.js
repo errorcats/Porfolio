@@ -786,6 +786,15 @@ const DesktopIcons = (() => {
       event.stopPropagation();
       select(definition.id);
 
+      if (AppCore.isTouchDevice() || AppCore.isTablet()) {
+        if (timer) {
+          clearTimeout(timer);
+          timer = null;
+        }
+        activate(definition.id);
+        return;
+      }
+
       if (timer) {
         clearTimeout(timer);
         timer = null;
